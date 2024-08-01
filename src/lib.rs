@@ -59,7 +59,7 @@
 mod exceptions;
 mod lock;
 
-#[cfg(target_arch = "aarch64")]
+#[cfg(any(target_arch = "aarch64", target_arch = "arm"))]
 pub use self::exceptions::exception_free;
 pub use self::{exceptions::ExceptionFree, lock::ExceptionLock};
 
